@@ -11,11 +11,11 @@ from peewee import (
 from playhouse.shortcuts import model_to_dict
 from sklearn.base import BaseEstimator, TransformerMixin
 import os
-
+from playhouse.db_url import connect
 
 # ---------------------- Database Setup ----------------------
 
-DB = SqliteDatabase('forecast_prices.db')
+DB = connect(os.environ.get('DATABASE_URL') or 'sqlite:///predictions.db')
 
 class PricePrediction(Model):
     sku = IntegerField()
