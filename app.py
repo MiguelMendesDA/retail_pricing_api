@@ -184,7 +184,7 @@ def check_actual_input(payload):
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/forecast_prices", methods=["POST"])
+@app.route("/forecast_prices/", methods=["POST"])
 def forecast_prices():
     payload = request.get_json()
     is_valid, error = check_forecast_input(payload)
@@ -228,7 +228,7 @@ def forecast_prices():
     })
 
 
-@app.route("/actual_prices", methods=["POST"])
+@app.route("/actual_prices/", methods=["POST"])
 def actual_prices():
     payload = request.get_json()
     is_valid, error = check_actual_input(payload)
