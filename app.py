@@ -204,8 +204,8 @@ def forecast_prices():
         pass
 
     try:
-        price_A = predict_price(model_A, hist_data_A, sku, time_key, competitor='A')
-        price_B = predict_price(model_B, hist_data_B, sku, time_key, competitor='B')
+        price_A = round (predict_price(model_A, hist_data_A, sku, time_key, competitor='A'), 2)
+        price_B = round (predict_price(model_B, hist_data_B, sku, time_key, competitor='B'), 2)
 
     except Exception as e:
         return jsonify({"error": f"Prediction failed: {str(e)}"}), 500
