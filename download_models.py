@@ -22,10 +22,10 @@ def download_file(url, destination):
 os.makedirs("models", exist_ok=True)
 
 files = {
-    "historical_features_A.pkl": "https://huggingface.co/datasets/MiguelMendesDs/retail-pricing-models/resolve/main/historical_features_A.pkl",
-    "historical_features_B.pkl": "https://huggingface.co/datasets/MiguelMendesDs/retail-pricing-models/resolve/main/historical_features_B.pkl",
-    "price_pipeline_A.pkl": "https://huggingface.co/datasets/MiguelMendesDs/retail-pricing-models/resolve/main/price_pipeline_A.pkl",
-    "price_pipeline_B.pkl": "https://huggingface.co/datasets/MiguelMendesDs/retail-pricing-models/resolve/main/price_pipeline_B.pkl"
+    "historical_features_A.pkl": "https://huggingface.co/datasets/MiguelMendesDs/retail-pricing-models/resolve/main/historical_features_A_retrain.pkl",
+    "historical_features_B.pkl": "https://huggingface.co/datasets/MiguelMendesDs/retail-pricing-models/resolve/main/historical_features_B_retrain.pkl",
+    "price_pipeline_A.pkl": "https://huggingface.co/datasets/MiguelMendesDs/retail-pricing-models/resolve/main/price_pipeline_A_retrain.pkl",
+    "price_pipeline_B.pkl": "https://huggingface.co/datasets/MiguelMendesDs/retail-pricing-models/resolve/main/price_pipeline_B_retrain.pkl"
 }
 
 # Download all files
